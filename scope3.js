@@ -13,3 +13,4 @@ function one() {
 let a = 1;
 console.log(a);
 one();
+localStorage;

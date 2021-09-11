@@ -7,6 +7,8 @@ function mostCommonNaiveSolution(s) {
 
   let maxOccurrences = 0;
   let mostCommonCharacter = null;
+
+  // Loop over every type of letter
   for (let i = 0; i < 26; i++) {
     // Convert number to an a-z character
     const character = String.fromCharCode(97 + i);
@@ -65,3 +67,6 @@ function mostCommonBetterSolution(s) {
 }
 
 console.log(mostCommonBetterSolution("Cathy Pedersen"));
+
+let val1 = String.fromCharCode(24);
+console.log(val1);
