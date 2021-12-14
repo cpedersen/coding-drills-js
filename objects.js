@@ -90,3 +90,27 @@ new Function()  // A new Function object
 new Date()      // A new Date object
 
 */
+let greeting = {
+  fullname: "Cathy Pedersen",
+  eyeColor: "hazel",
+  hairColor: "black",
+  greet: (message, name) => {
+    console.log(message + " " + name + "!");
+  },
+};
+
+console.log(greeting.fullname);
+greeting.greet("Greetings!", greeting.fullname);
+
+let user = {
+  name: "John",
+  age: 30,
+  isAdmin: true,
+};
+
+for (let key in user) {
+  // keys
+  console.log(key); // name, age, isAdmin
+  // values for the keys
+  console.log(user[key]); // John, 30, true
+}

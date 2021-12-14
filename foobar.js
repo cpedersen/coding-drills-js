@@ -1,13 +1,13 @@
-let array1 = ["yes", "no", "maybe", "always", "sometimes", "never", "if"];
-let array2 = [5, 8, 2, 9, 5, 6, 3, 1];
 
-function reverseArray(arr) {
-  let newArray = [];
-  for (i = arr.length - 1; i >= 0; i--) {
-    newArray.push(arr[i]);
-  }
-  return newArray;
+
+function removeDupes(linkedList) {
+    let currentNode = linkedList;
+    while (currentNode !== null) {
+        let nextDistinctNode = currentNode.next;
+        while (nextDistinctNode !== null && currentNode.value === nextDistinctNode.value) {
+            nextDistinctNode = nextDistinctNode.next;
+        }
+        currentNode.next  = nextDistinctNode;
+        currentNode = nextDistinctNode;
+    }
 }
-
-console.log(reverseArray(array1));
-console.log(reverseArray(array2));
